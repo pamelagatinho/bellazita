@@ -18,6 +18,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem "sorcery"
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+
+gem 'rails_12factor', group: :production
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -29,6 +32,8 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
