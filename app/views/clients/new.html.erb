@@ -1,5 +1,7 @@
-<h1>New client</h1>
+<h1> <%= t '.title'%></h1>
 
+<div class="forms">
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Back', clients_path %>
+<%= link_to t('links.back'), clients_path %>

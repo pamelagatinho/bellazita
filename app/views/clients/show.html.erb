@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
+  <strong> <%= t 'clients.index.name' %> </strong>
   <%= @client.name %>
 </p>
 
 <p>
-  <strong>Phone number:</strong>
+    <strong> <%= t 'clients.index.phone_number' %> </strong>
   <%= @client.phone_number %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+    <strong> <%= t 'clients.index.email' %> </strong>
   <%= @client.email %>
 </p>
 
 <p>
-  <strong>Birthday:</strong>
+    <strong> <%= t 'clients.index.birthday' %> </strong>
   <%= @client.birthday %>
 </p>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to t('links.edit'), edit_client_path(@client) %> |
+<%= link_to t('links.back'), clients_path %>
