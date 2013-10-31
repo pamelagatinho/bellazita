@@ -1,8 +1,10 @@
 Bellazita::Application.routes.draw do
   
-  get "password_resets/create"
-  get "password_resets/edit"
-  get "password_resets/update"
+ # get "sessions/new"
+  #get "users/new"
+  #get "password_resets/create"
+  #get "password_resets/edit"
+  #get "password_resets/update"
   resources :users 
   resources :clients
   resources :sessions
@@ -15,4 +17,7 @@ Bellazita::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
 
   root :to => "home#index"
+
+  get "secret" => "home#secret", :as => "secret"
+  
 end
