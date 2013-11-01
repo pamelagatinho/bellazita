@@ -1,11 +1,19 @@
 <div class="login">
+
+	<div class="row-fluid">
+  <div class="span4"></div>
+  <div class="span4">
 	<% if current_user %>
-		Logged in as <%= current_user.email %>.
+		Logged in as <%= current_user.email %>. </br>
 	    <%= link_to "Log out", logout_path %>
-	     <%= link_to 'Clientes', 'clients', class: "btn" %>
+	     <%= link_to 'Clientes', 'clients' %>
 	<% else %>
 		<%= link_to "Cadastro", signup_path %> or
 	    <%= link_to "Login", login_path %>.
 	<% end %>
+
+</div>
+
+
 </div>
 

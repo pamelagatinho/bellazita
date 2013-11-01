@@ -47,25 +47,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Bellazita</a>
-          
+         <%= link_to "Bellazita", root_path, class: "brand"  %>
+         <% if current_user %>
+    Logged in as <%= current_user.email %>. </br>
+      <%= link_to "Log out", logout_path %>
+       <%= link_to 'Clientes', 'clients' %>
+       <% end %>
+
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
+      <%= bootstrap_flash %>
+      <%= yield %>
+    </div>
       
-        <div class="span9">
-          <%= bootstrap_flash %>
-
-         
-          <%= yield %>
-        </div>
-      </div><!--/row-->
-
-      <footer>
+    <footer>
         <p>&copy; Desenvolvido por: Pâmela Leão</p>
-      </footer>
+    </footer>
+  </div><!--/row-->
+
+      
 
     </div> <!-- /container -->
 

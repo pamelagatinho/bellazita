@@ -217,7 +217,7 @@ pt-BR:
       user:
         email: Email
         password: Senha
-        password_confirmation: Confirme sua Senha
+        salt: Confirme sua Senha
       client:
         name: Nome
         phone_number: Celular
