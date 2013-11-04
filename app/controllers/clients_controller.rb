@@ -8,6 +8,10 @@ class ClientsController < ApplicationController
     @clients = Client.all
   end
 
+  def show
+    @clients = Client.all
+  end
+
   # GET /clients/new
   def new
     @client = Client.new
@@ -24,8 +28,8 @@ class ClientsController < ApplicationController
 
     respond_to do |format|
       if @client.save
-        format.html { redirect_to @client, notice: 'Cliente criado com sucesso.' }
-        format.json { render action: 'show', status: :created, location: @client }
+        format.html { redirect_to clients_path, notice: 'Cliente criado com sucesso.' }
+        format.json { render action: 'index' }
       else
         format.html { render action: 'new' }
         format.json { render json: @client.errors, status: :unprocessable_entity }
@@ -38,7 +42,7 @@ class ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Cliente atualizado com sucesso.' }
+        format.html { redirect_to clients_path, notice: 'Cliente atualizado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

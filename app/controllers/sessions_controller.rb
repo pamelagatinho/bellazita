@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user
     	@current_user = user
-      redirect_back_or_to root_url, :notice => "Login ok!"
+      redirect_to clients_path, :notice => "Login ok!"
     else
       flash.now.alert = "Email ou senha invalido(s)."
       render :new

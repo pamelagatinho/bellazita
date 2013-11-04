@@ -9,6 +9,7 @@
 
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <link href='http://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet' type='text/css'>
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
     <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
     <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
@@ -21,13 +22,13 @@
 
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
-        <%= link_to "Bellazita", root_path, class: "brand"  %>
+        <%= link_to "Bellazita", clients_path, class: "brand"  %>
 
         <div class="container-fluid">
           <ul class="nav">
             <% if current_user %>
               <li class=" divider-vertical">
-                <%= link_to 'Clientes', 'clients' %>
+                <%= link_to 'Clientes', clients_path %>
               </li>
             <% end %>
           </ul>

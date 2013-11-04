@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
   private
   def not_authenticated
-    redirect_to login_url, :alert => "Realize o login para acessar essa pagina."
+    redirect_to login_url, :notice => "Realize o login para acessar essa pagina."
   end
 end

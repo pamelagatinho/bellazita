@@ -254,6 +254,7 @@ pt-BR:
     show: Exibir
     edit: Editar
     delete: Deletar
+    cancel: Cancelar
   
   layout:
     rooms: Quartos
