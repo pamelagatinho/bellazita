@@ -1,7 +1,13 @@
-<h1> <%= t '.title'%></h1>
+<div class="row-fluid">
+	<legend> <%= t '.title'%></legend>
 
-<div class="forms">
-<%= render 'form' %>
+	<div class="forms">
+	<%= render 'form' %>
+	</div>
+
+</br></br></br>
+	<div class="span6">
+	<%= link_to t('links.back'), clients_path %>
 </div>
 
-<%= link_to t('links.back'), clients_path %>
+</div>

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-	before_filter :require_login, :only => :secret
+	before_action :require_login, :only => :index
 
   def index
   end

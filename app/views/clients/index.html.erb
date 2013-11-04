@@ -1,33 +1,17 @@
-<h1> <%= t 'clients.index.title' %> </h1>
+<legend> <%= t 'clients.index.title' %> </legend>
 
-<table>
-  <thead>
-    <tr>
-      <th> <%= t('clients.index.name') %></th>
-      <th><%= t('clients.index.email') %></th>
-      <th><%= t('clients.index.phone_number') %></th>
-      <th><%= t('clients.index.birthday') %></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<table class="table table-hover">
+  <th> <%= t('clients.index.name') %></th>
+  <th><%= t('clients.index.email') %></th>
+  <th><%= t('clients.index.phone_number') %></th>
+  <th><%= t('clients.index.birthday') %></th>
+  <th></th>
+  <th></th>
 
-  <tbody>
-    <% @clients.each do |client| %>
-      <tr>
-        <td><%= client.name %></td>
-        <td><%= client.phone_number %></td>
-        <td><%= client.email %></td>
-        <td><%= client.birthday %></td>
-        <td><%= link_to t('links.show'), client %></td>
-        <td><%= link_to t('links.edit'), edit_client_path(client) %></td>
-        <td><%= link_to t('links.delete'), client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<%= render partial: "client", collection: @clients %>
+  
 </table>
 
 <br>
 
-<%= link_to t('clients.new.link'), new_client_path %>
+<%= link_to t('clients.new.link'), new_client_path , class: "btn"%>

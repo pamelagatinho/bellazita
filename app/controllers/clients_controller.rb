@@ -1,15 +1,11 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   # GET /clients
   # GET /clients.json
   def index
     @clients = Client.all
-  end
-
-  # GET /clients/1
-  # GET /clients/1.json
-  def show
   end
 
   # GET /clients/new

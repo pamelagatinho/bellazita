@@ -1,6 +1,14 @@
-<h1> <%= t'.title'%></h1>
+<div class="row-fluid">
+  <legend> <%= t '.title'%></legend>
 
-<%= render 'form' %>
+  <div class="forms">
+  <%= render 'form' %>
+  </div>
 
-<%= link_to t('clients.show.link'), @client %> |
-<%= link_to t('links.back'), clients_path %>
+</br></br></br>
+  <div class="span6">
+    <%= link_to t('links.back'), clients_path , class: "btn" %>
+</div>
+
+</div>
+

@@ -5,27 +5,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %> 
-    <%= f.text_field :name %>
+      
+      
+      <div class="span6">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "input-block-level" %>
+      </div>
     <%= error_tag @client, :name %>
-  </div>
-  <div class="field">
+  
+
+  <div class="span6">
     <%= f.label :phone_number %>
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number, class: "input-block-level" %>
     <%= error_tag @client, :phone_number %>
   </div>
-  <div class="field">
+
+  <div class="span6">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "input-block-level" %>
     <%= error_tag @client, :email %>
   </div>
-  <div class="field">
+
+  <div class="span6">
     <%= f.label :birthday %>
-    <%= f.text_field :birthday %>
+    <%= f.text_field :birthday, class: "input-block-level" %>
     <%= error_tag @client, :birthday %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="span6">
+    <%= f.submit "Salvar", class: "btn btn-default btn-block"%>
   </div>
+
 <% end %>

@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+#logout {
+	float: right;
+}
+
+footer {
+  margin-top: 80px;
+  font-size: 11px;
+}

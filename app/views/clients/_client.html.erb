@@ -1,0 +1,8 @@
+<tr>
+  <td><%= client.name %></td>
+  <td><%= client.phone_number %></td>
+  <td><%= client.email %></td>
+  <td><%= client.birthday %></td>
+  <td><%= link_to t('links.edit'), edit_client_path(client), class: "btn btn-mini btn-primary" %></td>
+  <td><%= link_to t('links.delete'), client, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-mini btn-danger"  %></td>
+</tr>
