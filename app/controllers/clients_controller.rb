@@ -61,6 +61,21 @@ class ClientsController < ApplicationController
     end
   end
 
+  def sort
+    clients = Client.all
+    last_sorted = session[:last_sorted].blank? ? [] : session[:last_sorted]
+
+    if last_sorted.size < clients.size
+      client = clients.delete_if{ |client| last_sorted.include? client.id }.shuffle.first
+    else
+      client = clients.shuffle.first
+      last_sorted = []
+    end
+    session[:last_sorted] = last_sorted.blank? ? [client.id] : last_sorted + [client.id]
+
+    redirect_to clients_path, notice: "Cliente sorteado #{client.name}."
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client

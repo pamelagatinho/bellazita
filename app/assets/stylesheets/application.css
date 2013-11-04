@@ -16,6 +16,10 @@
 	float: right;
 }
 
+.container-margin {
+  margin: 0 36px 0 36px;
+}
+
 footer {
   margin-top: 80px;
   font-size: 11px;
@@ -34,4 +38,22 @@ footer {
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
           box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.titulo {
+  font-family: 'Allura', cursive;
+  font-size: 74px;
+  color: #000000;
+
+}
+
+.titulo a:link { text-decoration: none; }
+.titulo a:visited { text-decoration: none; }
+.titulo a:hover { text-decoration: none; }
+.titulo a:active { text-decoration: none; }
+
+
+.titulo-margin {
+  padding-top: 18px;
+  padding-bottom: 5px;
 }

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Bellazita" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Bellazita"  %></title>
     <%= csrf_meta_tags %>
 
 
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <link href='http://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Allura' rel='stylesheet' type='text/css'>
     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
     <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
     <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
@@ -21,15 +21,11 @@
   <body>
 
     <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <%= link_to "Bellazita", clients_path, class: "brand"  %>
-
+      <div class="navbar-inner titulo-margin">
         <div class="container-fluid">
           <ul class="nav">
+            <li><%= link_to "BellaZita", clients_path, class: "titulo"  %></li>
             <% if current_user %>
-              <li class=" divider-vertical">
-                <%= link_to 'Clientes', clients_path %>
-              </li>
             <% end %>
           </ul>
           <div id="logout">
@@ -43,7 +39,7 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid container-margin">
       <%= bootstrap_flash %>
       <%= yield %>
       <footer>
