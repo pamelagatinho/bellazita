@@ -25,14 +25,14 @@
         <div class="container-fluid">
           <ul class="nav">
             <li><%= link_to "BellaZita", clients_path, class: "titulo"  %></li>
-            <% if current_user %>
-            <% end %>
           </ul>
           <div id="logout">
             <ul class="nav">
-              <li>
-                <%= link_to "Log out", logout_path %> 
-              </li>
+              <% if current_user %>
+                <li>
+                  <%= link_to "Log out", logout_path %> 
+               </li>
+              <% end %>
             </ul>
           </div>
         </div>
