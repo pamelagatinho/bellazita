@@ -37,8 +37,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /clients/1
-  # PATCH/PUT /clients/1.json
   def update
     respond_to do |format|
       if @client.update(client_params)
@@ -51,8 +49,6 @@ class ClientsController < ApplicationController
     end
   end
 
-  # DELETE /clients/1
-  # DELETE /clients/1.json
   def destroy
     @client.destroy
     respond_to do |format|
@@ -72,6 +68,8 @@ class ClientsController < ApplicationController
       last_sorted = []
     end
     session[:last_sorted] = last_sorted.blank? ? [client.id] : last_sorted + [client.id]
+
+    ClientMailer.sorted(client).deliver
 
     redirect_to clients_path, notice: "Cliente sorteado #{client.name}."
   end
