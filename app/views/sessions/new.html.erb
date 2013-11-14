@@ -2,7 +2,9 @@
   <div class="span4"></div>
   <div class="span4">
 
-<fieldset>
+<!-- fieldset -->
+<div class="panel panel-default">
+  <div class="panel-body">
     <legend>Entrar</legend>
     
     <%= form_tag sessions_path , class: "form-signin" do %>
@@ -15,8 +17,8 @@
       
       <div class="actions"><%= submit_tag "Login" ,class: "btn btn-default btn-block"%></div>
     <% end %>
-</fieldset>
-
+<!--/fieldset -->
+  </div>  </div>
   </div>
 
 </div>

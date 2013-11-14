@@ -1,7 +1,10 @@
 <%= form_for(@client) do |f| %>
   <% if @client.errors.any? %>
-    <div id="error_explanation">
-      <h2> <%= t 'general.form_error'%> </h2>
+    <div class="alert alert-danger">
+      <%= t 'general.form_error'%>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
     </div>
   <% end %>
   
@@ -10,7 +13,6 @@
     <%= f.label :name , :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :name, class: "text-field" %>
-      <%= error_tag @client, :name %>
     </div>
   </div>
 
@@ -18,7 +20,6 @@
     <%= f.label :phone_number , :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :phone_number, class: "text-field" %>
-      <%= error_tag @client, :phone_number %>
     </div>
   </div>
 
@@ -26,7 +27,6 @@
     <%= f.label :email , :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :email, class: "text-field" %>
-      <%= error_tag @client, :email %>
     </div>
   </div>
   
@@ -35,7 +35,6 @@
     <%= f.label :birthday , :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :birthday, class: "text-field" %>
-      <%= error_tag @client, :birthday %>
     </div>
   </div>
 
