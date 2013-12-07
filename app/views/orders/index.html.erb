@@ -1,0 +1,31 @@
+<legend> 
+  <div> Lista de pedidos de <%= @client.name %></div>
+</legend>
+
+<div class="btn-group">
+  <%= link_to t('orders.new.link'), new_client_order_path , class: "btn"%>
+</div>
+
+<br><br><br>
+
+<table class="table table-hover">
+  <th> Data do pedido</th>
+  <th> Quantidade de itens</th>
+  <th> Valor Total</th>
+  <th></th>
+  <th></th>
+
+
+<%= render partial: "order", collection: @client.orders %>
+
+<div>
+      Pedidos realizados: <span class=""><%= @client.orders.size %></span>
+</div>
+  
+</table>
+
+  <div class="form-actions">
+    <%= link_to t('links.cancel'), clients_path , class: "btn btn-default"%>
+    <%= link_to t('links.new'), clients_path , class: "btn btn-default"%>
+  </div>
+

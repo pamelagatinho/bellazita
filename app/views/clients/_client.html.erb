@@ -5,6 +5,7 @@
   <td><%= client.birthday %></td>
   <td><%= link_to t('links.edit'), edit_client_path(client), class: "btn btn-mini" %></td>
   <td><%= link_to t('links.delete'), client, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse cliente?' }, class: "btn btn-mini btn-danger"  %></td>
+  <td><%= link_to t('links.order'), client_orders_path(client), class: "btn btn-mini" %></td>
 
 
 </tr>

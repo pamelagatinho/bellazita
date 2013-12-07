@@ -1,0 +1,29 @@
+<legend> 
+  <%= t 'products.index.title' %> 
+  
+</legend>
+
+
+<div class="btn-group">
+<%= link_to t('products.new.link'), new_product_path , class: "btn"%>
+<!-- %= link_to "Sortear cliente", sort_clients_path , class: "btn"% -->
+</div>
+
+<br><br><br>
+
+<table class="table table-hover">
+  <th> <%= t('products.index.code') %></th>
+  <th><%= t('products.index.description') %></th>
+  <th><%= t('products.index.price') %></th>
+  <th></th>
+  <th></th>
+
+
+<%= render partial: "product", collection: @products %>
+
+<div>
+      Produtos cadastrados: <span class=""><%= @products.length %></span>
+</div>
+  
+</table>
+

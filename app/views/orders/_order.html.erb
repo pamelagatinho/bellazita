@@ -1,0 +1,7 @@
+<tr>
+  <td><%= order.updated_at.to_s(:data_br)  %></td>
+  <td><%= order.products.size %></td>
+  <td><%= link_to t('links.edit'), edit_client_order_path(@client, @order), class: "btn btn-mini" %></td>
+
+
+</tr>

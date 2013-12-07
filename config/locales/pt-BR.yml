@@ -213,6 +213,7 @@ pt-BR:
     models:
       user: Usuário
       client: Cliente
+      product: Produto
     attributes:
       user:
         email: Email
@@ -223,6 +224,10 @@ pt-BR:
         phone_number: Celular
         email: Email
         birthday: 'Aniversário  (dd/mm)'
+      product: &product
+        code: 'Código'
+        description: 'Descrição'
+        price: 'Preço'
   
   users:
     new:
@@ -248,6 +253,19 @@ pt-BR:
     show:
       link: Exibir
       title: Exibir dados do cliente
+  products:
+    index:
+      title: Lista de produtos
+      <<: *product
+      
+    new:
+      link: Novo produto
+      title: Cadastro de produto
+    edit: 
+      title: Alterar dados do produto
+    show:
+      link: Exibir
+      title: Exibir dados do produto
 
   links:
     back: Voltar
@@ -255,6 +273,9 @@ pt-BR:
     edit: Editar
     delete: Deletar
     cancel: Cancelar
+  menu:
+    clients: Clientes
+    products: Produtos
   
   layout:
     rooms: Quartos

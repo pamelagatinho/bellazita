@@ -1,5 +1,7 @@
 class Client < ActiveRecord::Base
 
+  has_many :orders
+  
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
 	BIRTHDAY_REGEXP = /^(([012][0-9])|(3[01]))\/(0[1-9]|1[012])/

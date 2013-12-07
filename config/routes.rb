@@ -6,8 +6,14 @@ Bellazita::Application.routes.draw do
   #get "password_resets/edit"
   #get "password_resets/update"
   resources :users 
+  resources :products
   resources :clients do
     get :sort, on: :collection
+    resources :orders
+  end
+
+  resources :orders, only: [:none] do
+    post :add_product
   end
 
   resources :sessions

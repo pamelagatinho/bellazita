@@ -1,0 +1,9 @@
+<tr>
+  <td><%= product.code %></td>
+  <td><%= product.description %></td>
+  <td><%= product.price %></td>
+  <td><%= link_to t('links.edit'), edit_product_path(product), class: "btn btn-mini" %></td>
+  <td><%= link_to t('links.delete'), product, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse produto?' }, class: "btn btn-mini btn-danger"  %></td>
+
+
+</tr>

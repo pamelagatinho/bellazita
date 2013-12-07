@@ -1,0 +1,38 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div class="alert alert-danger">
+      <%= t 'general.form_error'%>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </div>
+  <% end %>
+  
+      
+  <div class="control-group">
+    <%= f.label :code , :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :code, class: "text-field" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :description , :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description, class: "text-field" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :price , :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :price, class: "text-field" %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Salvar", class: "btn btn-default, btn-primary"%>
+    <%= link_to t('links.cancel'), products_path , class: "btn btn-default"%>
+  </div>
+
+<% end %>

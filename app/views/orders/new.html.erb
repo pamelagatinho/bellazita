@@ -1,0 +1,38 @@
+<legend> 
+  <div> Produtos da compra de <%= @order.client.name %></div>
+</legend>
+
+
+<div class="control-group">
+Código do produto:
+    <div class="controls">
+      <%= form_tag(order_add_product_path(@order.client), :method=>'post', :multipart => true) do %>
+        <%= text_field_tag :product_code, params[:product_code], class: "text-field" %>
+        <%= submit_tag "Salvar", class: "btn btn-default, btn-primary"%>
+      <% end %>
+
+  </div>
+  </div>
+
+<br><br><br>
+
+<table class="table table-hover">
+  <th> Código</th>
+  <th> Descrição </th>
+  <th> Valor </th>
+  <th></th>
+  <th></th>
+
+
+<%= render partial: "order_products", collection: @order.products %>
+
+<div>
+      Quantidade de Produtos: <span class=""><%= @order.products.size %></span>
+</div>
+  
+</table>
+
+  <div class="form-actions">
+    <%= link_to t('links.cancel'), clients_path , class: "btn btn-default"%>
+  </div>
+

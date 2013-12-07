@@ -69,7 +69,7 @@ class ClientsController < ApplicationController
     end
     session[:last_sorted] = last_sorted.blank? ? [client.id] : last_sorted + [client.id]
 
-    ClientMailer.sorted(client).deliver
+    ##ClientMailer.sorted(client).deliver
 
     redirect_to clients_path, notice: "Cliente sorteado #{client.name}."
   end
